@@ -32,6 +32,7 @@ RUN apk add --no-cache --update \
     php7-pdo \
     php7-pdo_mysql \
     php7-fpm \
+    php7-session \
     git
 
 # Runtime env vars are envstub'd into config during entrypoint
