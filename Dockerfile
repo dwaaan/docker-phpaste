@@ -30,6 +30,7 @@ RUN apk add --no-cache --update \
     php7-pcntl \
     php7-pdo \
     php7-pdo_mysql \
+    git
 
 # Runtime env vars are envstub'd into config during entrypoint
 ENV SERVER_NAME="localhost"
@@ -43,7 +44,9 @@ COPY ./supervisord.conf /supervisord.conf
 COPY ./php-fpm-www.conf /etc/php7/php-fpm.d/www.conf
 COPY ./nginx.conf.template /nginx.conf.template
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
-ADD src /www
+
+RUN git clone https://github.com/jordansamuel/PASTE /www
+
 RUN chmod +x /docker-entrypoint.sh && chmod -R 777 /www/u && chmod -R 777 /www
 
 
