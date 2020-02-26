@@ -48,7 +48,7 @@ COPY ./docker-entrypoint.sh /docker-entrypoint.sh
 
 RUN git clone https://github.com/jordansamuel/PASTE /www
 
-RUN chmod +x /docker-entrypoint.sh && chmod -R 777 /www/u && chmod -R 777 /www
+RUN chmod +x /docker-entrypoint.sh && chmod -R 777 /www
 
 
 
