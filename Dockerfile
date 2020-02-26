@@ -18,7 +18,7 @@ RUN apk add --no-cache --update \
     gettext \
     nginx && \
     mkdir -p /var/cache/nginx && \
-    mkdir -p /var/tmp/nginx
+    mkdir -p /var/tmp/nginx && \
     chown -R www-data:www-data /var/cache/nginx && \
     chown -R www-data:www-data /var/lib/nginx && \
     chown -R www-data:www-data /var/tmp/nginx
