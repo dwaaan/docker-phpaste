@@ -17,7 +17,7 @@ CREATE TABLE `admin` (
 );
 
 INSERT INTO `admin` (`id`, `user`, `pass`) VALUES
-(1, 'admin', '$1$cQNU6hrf$yw0rlswrJb.oWSN7HIJbw/');
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3');
 
 -- Admin history
 
