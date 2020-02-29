@@ -42,6 +42,7 @@ RUN apk add --no-cache --update \
     php7-zlib \
     php7-zmq \
     php7-phar \
+    mysql-client \
     git
 
 # Runtime env vars are envstub'd into config during entrypoint
