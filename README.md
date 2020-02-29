@@ -11,7 +11,7 @@ Paste is a project that started from the files pastebin.com used before it was b
 * Edit docker-compose.yml, set `MYSQL_ROOT_PASSWORD`, change port if needed (default 80)  
 * `docker-compose up -d`  
 * wait ~30 seconds for mysql startup & database creation  
-* open http://yourip:port  
+* open http://yourip:port/install  
 * enter database details:  
 > database host: mysql  
 > database: paste  
