@@ -46,7 +46,7 @@ $sec_key = '';
 define('SECRET',md5($sec_key));
 
 // Set to 1 to enable Apache's mod_rewrite
-$mod_rewrite = "0";
+$mod_rewrite = "1";
 
 // Available GeSHi formats
 $geshiformats =array(
