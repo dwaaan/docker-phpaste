@@ -7,9 +7,12 @@ services:
     ports:
       - 80:80
     restart: unless-stopped
+    volumes:
+      ./config.php:/www/config.php
   mysql:
     image: mysql:latest
     command: --default-authentication-plugin=mysql_native_password --init-file /init.sql
+    restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_ROOT_USER: root
