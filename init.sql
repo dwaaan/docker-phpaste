@@ -164,7 +164,7 @@ CREATE TABLE `site_info` (
 );
 
 INSERT INTO `site_info` (`id`, `title`, `des`, `keyword`, `site_name`, `email`, `twit`, `face`, `gplus`, `ga`, `additional_scripts`, `baseurl`) VALUES
-(1, 'Paste', 'Paste can store text, source code or sensitive data for a set period of time.', 'paste,pastebin.com,pastebin,text,paste,online paste', 'Paste', '', 'https://twitter.com/', 'https://www.facebook.com/', 'https://plus.google.com/', 'UA-', '', 'pastethis.in');
+(1, 'Paste', 'Paste can store text, source code or sensitive data for a set period of time.', 'paste,pastebin.com,pastebin,text,paste,online paste', 'Paste', '', 'https://twitter.com/', 'https://www.facebook.com/', 'https://plus.google.com/', 'UA-', '', '172.16.50.9');
 
 -- Site permissions
 
