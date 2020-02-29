@@ -18,7 +18,7 @@ $currentversion = 2.2;
 // post_max_size in your PHP configuration settings (php.ini) or empty errors will occur.
 // The value we got on installation of Paste was: post_max_size = 8M
 // Otherwise, the maximum value that can be set is 4000 (4GB)
-$pastelimit = "8"; // 0.5 = 512 kilobytes, 1 = 1MB
+$pastelimit = "0.5"; // 0.5 = 512 kilobytes, 1 = 1MB
  
 // OAUTH (to enable, change to yes and edit)
 $enablefb = "no";
@@ -36,13 +36,13 @@ define('G_Redirect_Uri', 'http://DOMAIN.TLD/oauth/google.php'); // Leave this as
 define('G_Application_Name', 'Paste'); // Make sure this matches the name of your application
 
 // Database information
-$dbhost = "mysql";
-$dbuser = "root";
-$dbpassword = "rootpassword";
-$dbname = "paste";
+$dbhost = "localhost";
+$dbuser = "DATABASEUSER";
+$dbpassword = "PASSWORD";
+$dbname = "DATABASENAME";
 
 // Secret key for paste encryption (GENERATE KEYS FROM MKPASSWD.NET)
-$sec_key = 'e7fac552b1443395c332968cfa5e32fe';
+$sec_key = '';
 define('SECRET',md5($sec_key));
 
 // Set to 1 to enable Apache's mod_rewrite
