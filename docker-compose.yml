@@ -9,8 +9,13 @@ services:
     restart: unless-stopped
   mysql:
     image: mysql:latest
-    command: --default-authentication-plugin=mysql_native_password
+    command: --default-authentication-plugin=mysql_native_password --init-file /init.sql
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_ROOT_USER: root
+      MYSQL_DATABASE: paste
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpassword
     volumes:
       - ./data_mysql:/var/lib/mysql
+      - ./init.sql:/init.sql
