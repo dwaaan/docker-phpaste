@@ -38,7 +38,7 @@ RUN apk add --no-cache --update \
     php7-mbstring \
     php7-ctype \
     php7-tokenizer \
-    php7-xlib \
+    php7-zlib \
     php7-zmq \
     php7-phar \
     git
