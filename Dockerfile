@@ -43,6 +43,7 @@ RUN apk add --no-cache --update \
     php7-zmq \
     php7-phar \
     mysql-client \
+    mariadb-client \
     git
 
 # Runtime env vars are envstub'd into config during entrypoint
