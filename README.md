@@ -13,10 +13,10 @@ Paste is a project that started from the files pastebin.com used before it was b
 * wait ~30 seconds for mysql startup & database creation  
 * open http://yourip:port  
 * enter database details:  
-- database host: mysql
-- database: paste  
-- username:  root  
-- password:  set in `docker-compose.yml`  
+> database host: mysql  
+> database: paste  
+> username:  root  
+> password:  set in `docker-compose.yml`  
 * enter admin username & password
 * `rm -rf www/install` - the web interface will not load until install directory is removed  
 * baseurl must be set in the database - without doing this pages will not load correctly - format is hostname/ip:port  
