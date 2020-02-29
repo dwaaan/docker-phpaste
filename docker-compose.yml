@@ -11,7 +11,7 @@ services:
       - ./config.php:/www/config.php
   mysql:
     image: mysql:latest
-    command: --default-authentication-plugin=mysql_native_password --init-file /init.sql
+    command: --default-authentication-plugin=mysql_native_password
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
