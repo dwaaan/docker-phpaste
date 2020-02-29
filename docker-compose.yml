@@ -2,7 +2,7 @@
 version: "2"
 services:
   paste:
-    image: git.adr3nalin3.net:4567/dleahy/docker-phpaste:master
+    image: dwaan/docker-phpaste:latest
     container_name: paste
     ports:
       - 80:80
