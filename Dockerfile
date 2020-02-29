@@ -33,6 +33,7 @@ RUN apk add --no-cache --update \
     php7-pdo_mysql \
     php7-mysqli \
     php7-fpm \
+    php7-json
     php7-session \
     php7-curl \
     php7-dom \
