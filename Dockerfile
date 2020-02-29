@@ -33,6 +33,14 @@ RUN apk add --no-cache --update \
     php7-pdo_mysql \
     php7-fpm \
     php7-session \
+    php7-curl \
+    php7-dom \
+    php7-mbstring \
+    php7-ctype \
+    php7-tokenizer \
+    php7-xlib \
+    php7-zmq \
+    php7-phar \
     git
 
 # Runtime env vars are envstub'd into config during entrypoint
