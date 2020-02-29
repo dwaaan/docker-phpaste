@@ -42,7 +42,7 @@ $dbpassword = "rootpassword";
 $dbname = "paste";
 
 // Secret key for paste encryption (GENERATE KEYS FROM MKPASSWD.NET)
-$sec_key = '';
+$sec_key = 'e7fac552b1443395c332968cfa5e32fe';
 define('SECRET',md5($sec_key));
 
 // Set to 1 to enable Apache's mod_rewrite
