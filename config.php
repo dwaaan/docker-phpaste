@@ -43,11 +43,11 @@ $dbpassword = "rootpassword";
 $dbname = "paste";
 
 // Secret key for paste encryption
-$sec_key  = "d640aa358e377307a5bfcbf51b9f3e4e";
+$sec_key  = "8fe6b139a49a4f29f48109c7d049190a";
 define('SECRET',md5($sec_key));
 
 // Set to 1 to enable Apache's mod_rewrite
-$mod_rewrite = "1";
+$mod_rewrite = "0";
 
 // Available GeSHi formats
 $geshiformats =array(
