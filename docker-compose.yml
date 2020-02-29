@@ -2,7 +2,7 @@
 version: "2"
 services:
   paste:
-    image: dwaan/docker-phpaste:latest
+    image: dwaaan/docker-phpaste:latest
     container_name: paste
     ports:
       - 80:80
