@@ -1,4 +1,4 @@
-![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/dwaaan/docker-phpaste.svg)![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/dwaaan/docker-phpaste.svg) [![](https://images.microbadger.com/badges/image/dwaaan/docker-phpaste.svg)](https://microbadger.com/images/dwaaan/docker-phpaste )
+![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/dwaaan/phpaste-docker.svg)![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/dwaaan/phpaste-docker.svg) [![](https://images.microbadger.com/badges/image/dwaaan/phpaste-docker.svg)](https://microbadger.com/images/dwaaan/phpaste-docker )
 
 Docker image & Compose files for PASTE - https://github.com/jordansamuel/PASTE  
 Paste is a project that started from the files pastebin.com used before it was bought.  
