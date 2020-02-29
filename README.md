@@ -20,7 +20,7 @@ Paste is a project that started from the files pastebin.com used before it was b
 * enter admin username & password
 * `rm -rf www/install` - the web interface will not load until install directory is removed  
 * baseurl must be set in the database - without doing this pages will not load correctly - format is hostname/ip:port  
-* `docker exec -ti paste mysql -u root -p paste`  
+* `docker exec -ti paste mysql -h mysql -u root -p paste`  
 > enter root password from docker-compose.yml  
 * `use paste; update site_info SET baseurl='172.16.50.9';`  
 * `exit`
