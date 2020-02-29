@@ -1,6 +1,6 @@
 <?php
 /*
- * Paste <https://github.com/jordansamuel/PASTE>
+ * $ID Project: Paste 2.0 - J.Samuel
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -10,13 +10,14 @@
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License in docs/GPL.txt for more details.
+ * GNU General Public License in LIC.txt for more details.
  */
+ 
 $currentversion = 2.2;
 
 // Max paste size in MB. This value should always be below the value of
 // post_max_size in your PHP configuration settings (php.ini) or empty errors will occur.
-// The value we got on installation of Paste was: post_max_size = 8M
+// The value we got on installation of Paste was: post_max_size = 20M
 // Otherwise, the maximum value that can be set is 4000 (4GB)
 $pastelimit = "0.5"; // 0.5 = 512 kilobytes, 1 = 1MB
  
@@ -32,17 +33,17 @@ define('FB_APP_SECRET', 'CHANGE THIS');    // What's your Secret key
 // Google 
 define('G_Client_ID', 'CHANGE THIS'); // Get a Client ID from https://console.developers.google.com/projectselector/apis/library
 define('G_Client_Secret', 'CHANGE THIS'); // What's your Secret key
-define('G_Redirect_Uri', 'http://DOMAIN.TLD/oauth/google.php'); // Leave this as is
+define('G_Redirect_Uri', 'http://localhost//oauth/google.php'); // Leave this as is
 define('G_Application_Name', 'Paste'); // Make sure this matches the name of your application
 
 // Database information
-$dbhost = "localhost";
-$dbuser = "DATABASEUSER";
-$dbpassword = "PASSWORD";
-$dbname = "DATABASENAME";
+$dbhost = "mysql";
+$dbuser = "root";
+$dbpassword = "rootpassword";
+$dbname = "paste";
 
-// Secret key for paste encryption (GENERATE KEYS FROM MKPASSWD.NET)
-$sec_key = '';
+// Secret key for paste encryption
+$sec_key  = "d640aa358e377307a5bfcbf51b9f3e4e";
 define('SECRET',md5($sec_key));
 
 // Set to 1 to enable Apache's mod_rewrite
