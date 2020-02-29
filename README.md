@@ -3,7 +3,7 @@ Paste is a project that started from the files pastebin.com used before it was b
 
 ### Howto  
 
-* `git clone `  
+* `git clone https://github.com/dwaaan/docker-phpaste`  
 * `cd docker-phpaste`  
 * `chmod -R 777 www/`  
 * Edit docker-compose.yml, set `MYSQL_ROOT_PASSWORD`, change port if needed (default 80)  
