@@ -23,5 +23,5 @@ Paste is a project that started from the files pastebin.com used before it was b
 * `docker exec -ti paste mysql -u root -p paste`  
 > enter root password from docker-compose.yml  
 * `use paste; update site_info SET baseurl='172.16.50.9';`  
-* exit
-* setup complete
+* `exit`
+> setup complete
