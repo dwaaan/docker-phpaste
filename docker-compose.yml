@@ -8,7 +8,7 @@ services:
       - 80:80
     restart: unless-stopped
     volumes:
-      - ./config.php:/www/config.php
+      - ./config.php:/www/config.php:rw
   mysql:
     image: mysql:latest
     command: --default-authentication-plugin=mysql_native_password
@@ -17,8 +17,6 @@ services:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_ROOT_USER: root
       MYSQL_DATABASE: paste
-      MYSQL_USER: user
-      MYSQL_PASSWORD: userpassword
     volumes:
       - ./data_mysql:/var/lib/mysql
       - ./sql:/docker-entrypoint-initdb.d
