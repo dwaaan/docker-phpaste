@@ -7,3 +7,10 @@ services:
     ports:
       - 32881:80
     restart: unless-stopped
+  mysql:
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+    volumes:
+      - ./data_mysql:/var/lib/mysql
