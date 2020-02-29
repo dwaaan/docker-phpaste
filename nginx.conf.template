@@ -1,57 +1,16 @@
-pid /run/nginx.pid;
+# Edit first.
 
-user www-data;
-
-worker_processes auto;
-
-error_log /dev/stderr info;
-
-events {
-  worker_connections 2048;
-  multi_accept on;
-  use epoll;
-}
-
-http {
-  server_tokens off;
-
-  sendfile on;
-
-  tcp_nopush on;
-  tcp_nodelay on;
-
-  keepalive_timeout 15;
-
-  types_hash_max_size 2048;
-
-  client_max_body_size 20M;
-
-  default_type application/octet-stream;
-
-  gzip on;
-  gzip_disable "msie6";
-
-  open_file_cache max=100;
-
-  log_format docker '$remote_addr $remote_user $status "$request" "$http_referer" "$http_user_agent" ';
-
-  access_log /dev/stdout docker;
-
-  include /etc/nginx/mime.types;
-
-  server {
+server {
+    server_name localhost;
     listen 80;
-    listen [::]:80;
-    real_ip_header X-Forwarded-For;
-    set_real_ip_from 0.0.0.0/0;
+    #listen 443;
+    root /www;
+    access_log /var/log/nginx/paste_access.log;
+    error_log /var/log/nginx/paste_error.log;
 
-    server_name $SERVER_NAME $SERVER_ALIAS;
+    index index.php index.html index.htm;
 
-    root $SERVER_ROOT;
-
-    index index.php;
-    
-    rewrite ^/page/([a-zA-Z0-9]+)/? /pages.php?page=$1 last;
+	rewrite ^/page/([a-zA-Z0-9]+)/? /pages.php?page=$1 last;
 	rewrite ^/archive /archive.php last;
 	rewrite ^/profile /profile.php last;
 	rewrite ^/user/([^/]+)/?$ /user.php?user=$1 last;
@@ -60,26 +19,13 @@ http {
 	rewrite ^/raw/(.*)$ /paste.php?raw&id=$1 last;
 	rewrite ^/embed/(.*)$ /paste.php?embed&id=$1 last;
 	location /{
-	    try_files $uri $uri/ /index.php$is_args$args;
 		rewrite ^/([0-9]+)/?$ /paste.php?id=$1;
 	}
 
-
     location ~ \.php$ {
-      try_files $uri /index.php =404;
-      fastcgi_pass unix:/run/php-fpm.sock;
-      fastcgi_index index.php;
-      fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-      include fastcgi_params;
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php-fpm.sock;
+	#fastcgi_pass unix:/run/php7.0-fpm.sock;
+        #fastcgi_pass unix:/run/php7.1-fpm.sock;
     }
-
-    location ~ /\.ht {
-      deny all;
-    }
-
-    location ~ ^/favicon {
-      log_not_found on;
-      access_log off;
-    }
-  }
 }
