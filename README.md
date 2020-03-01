@@ -3,6 +3,8 @@
 Docker image & Compose files for PASTE - https://github.com/jordansamuel/PASTE  
 Paste is a project that started from the files pastebin.com used before it was bought.  
 
+## NOT CURRENTLY WORKING ##
+
 ### Howto  
 
 * `git clone https://github.com/dwaaan/docker-phpaste`  
